@@ -1,0 +1,2 @@
+docker run -v $PWD/config:/tmp/k3s_config -itd tozastation/k8s_deployer:latest
+kubectl --kubeconfig /tmp/k3s_config/k8s-config.yaml -n kube-system --insecure-skip-tls-verify=true apply -f /tmp/k3s_config/api
